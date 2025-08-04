@@ -8,6 +8,8 @@ class Matrix {
  public:
   Matrix(const std::size_t n_rows, const std::size_t n_cols);
 
+  Matrix(Matrix&& m);
+
   ~Matrix();
 
   double& operator()(const std::size_t row, const std::size_t col);

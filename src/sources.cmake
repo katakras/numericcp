@@ -1,5 +1,9 @@
 set(
     CORE_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/ode/euler_method.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode/ode_solver.cpp
     ${CMAKE_CURRENT_LIST_DIR}/serialization/serialization.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode_system/linear_system.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode_system/ivp_problem.cpp
     ${CMAKE_CURRENT_LIST_DIR}/math/matrix.cpp
 )
