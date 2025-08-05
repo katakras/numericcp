@@ -33,10 +33,12 @@ class SerializationRegistry {
   std::unordered_map<std::string, DeserializeFunc> deserializers_;
 };
 
-#define REGISTER_SERIALIZABLE_TYPE(T)                                              \
-  namespace {                                                                      \
-  struct T##RegistryEntry {                                                        \
-    T##RegistryEntry() { SerializationRegistry::instance().register_type<T>(#T); } \
-  };                                                                               \
-  static T##RegistryEntry global_##T##RegistryEntry;                               \
+#define REGISTER_SERIALIZABLE_TYPE(T)                         \
+  namespace {                                                 \
+  struct T##RegistryEntry {                                   \
+    T##RegistryEntry() {                                      \
+      SerializationRegistry::instance().register_type<T>(#T); \
+    }                                                         \
+  };                                                          \
+  static T##RegistryEntry global_##T##RegistryEntry;          \
   }

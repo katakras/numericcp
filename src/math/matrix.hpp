@@ -15,8 +15,12 @@ class Matrix {
   double& operator()(const std::size_t row, const std::size_t col);
   double operator()(const std::size_t row, const std::size_t col) const;
 
-  auto n_rows() const { return n_rows_; }
-  auto n_cols() const { return n_cols_; }
+  auto n_rows() const {
+    return n_rows_;
+  }
+  auto n_cols() const {
+    return n_cols_;
+  }
 
  private:
   std::size_t n_rows_;

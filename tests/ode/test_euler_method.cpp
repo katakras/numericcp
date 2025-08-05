@@ -9,7 +9,9 @@ using namespace vector_ops;
 
 class dummy_system : public ode_system::system {
  public:
-  dvector evaluate(const double t, const dvector& x) const override { return 0.1 * t + 0.5 * x; }
+  dvector evaluate(const double t, const dvector& x) const override {
+    return 0.1 * t + 0.5 * x;
+  }
 };
 }  // namespace
 

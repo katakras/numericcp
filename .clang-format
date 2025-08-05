@@ -6,3 +6,5 @@ PointerAlignment: Left
 AllowAllConstructorInitializersOnNextLine: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 BinPackParameters: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false

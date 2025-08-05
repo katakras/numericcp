@@ -9,9 +9,13 @@ class DummySerializationClass {
   nlohmann::json to_json() const {
     return nlohmann::json({{"$class", "DummySerializationClass"}, {"v", v_}});
   }
-  void from_json(const nlohmann::json& j) { v_ = j.at("v"); }
+  void from_json(const nlohmann::json& j) {
+    v_ = j.at("v");
+  }
 
-  auto v() const { return v_; }
+  auto v() const {
+    return v_;
+  }
 
  private:
   DummySerializationClass() = default;
