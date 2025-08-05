@@ -7,7 +7,7 @@
 #include "src/ode_system/ivp_problem.hpp"
 #include "src/ode_system/linear_system.hpp"
 
-TEST_CASE("Linear ODE system evaluation", "[match]") {
+TEST_CASE("Linear ODE system evaluation", "[ode_system]") {
   const double alpha = 0.1;
   const double beta = 0.2;
   const ode_system::linear_system s(alpha, beta);
@@ -20,7 +20,7 @@ TEST_CASE("Linear ODE system evaluation", "[match]") {
   REQUIRE(dx[1u] == alpha + beta * x[1u]);
 }
 
-TEST_CASE("Simple exponential solution", "[match]") {
+TEST_CASE("Simple exponential solution", "[ode_system]") {
   const double dt = 0.05;
   const auto& sys = std::make_shared<const ode_system::linear_system>(0.0, 1.0);
   const dvector x = {0.0, 1.0};

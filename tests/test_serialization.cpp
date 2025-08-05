@@ -22,7 +22,7 @@ class DummySerializationClass {
 
 REGISTER_SERIALIZABLE_TYPE(DummySerializationClass)
 
-TEST_CASE("Dummy class serialization", "[match]") {
+TEST_CASE("Dummy class serialization", "[serialization]") {
   const auto& obj = std::make_shared<DummySerializationClass>(1);
   const auto& obj_json = obj->to_json();
   const auto& obj_from_json = std::static_pointer_cast<DummySerializationClass>(

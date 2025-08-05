@@ -13,7 +13,7 @@ class dummy_system : public ode_system::system {
 };
 }  // namespace
 
-TEST_CASE("Euler method (simple)", "[match]") {
+TEST_CASE("Euler method (simple)", "[ode]") {
   const auto& sys = std::make_shared<const dummy_system>();
 
   const double dt = 0.1;
