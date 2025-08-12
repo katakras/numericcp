@@ -1,4 +1,10 @@
 set(
     BINDING_SOURCES
     ${CMAKE_CURRENT_LIST_DIR}/bindings.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/math/bindings_matrix.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode/bindings_euler_method.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode/bindings_ode_solver.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode_system/bindings_ivp_problem.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode_system/bindings_linear_system.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ode_system/bindings_system.cpp
 )
